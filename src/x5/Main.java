@@ -6,7 +6,7 @@ import x5.api.*;
 /**
  * Startet den Versuchsaufbau.
  * 
- * @author Inga Schwarze
+ * @author Inga Schwarze und Robert Dziuba
  */
 public class Main {
 	
