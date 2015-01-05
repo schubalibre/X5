@@ -18,7 +18,7 @@ public class Main {
 	 * Einfacher Versuchsaufbau mit einem Sender und Empfänger.
 	 */
 	private static void startOneSenderAndOneReceiver() {
-		final TextContainer queue = new TextContainerPrototype(10);
+		final TextContainer queue = new TextContainerQueue();
 		Sender sender = new ConsoleSender("Sender 1", queue);
 		
 		Receiver receiver = new TextGUIReceiver("Receiver 1", queue);
@@ -27,7 +27,7 @@ public class Main {
 		senderThread.startExecution();
 		AnimatorThread receiverThread = new AnimatorThread(receiver);
 		receiverThread.startExecution();
-		receiverThread.setSleepRange(10000);
+		receiverThread.setSleepRange(5000);
 		
 	}
 	
