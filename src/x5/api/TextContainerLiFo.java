@@ -1,15 +1,15 @@
 package x5.api;
 
-public class TextContainerFiFO implements TextContainer {
+public class TextContainerLiFo implements TextContainer {
 	
 	private String[] stack;
 	private int size, top = 0;
 	
-	public TextContainerFiFO(){
+	public TextContainerLiFo(){
 		this(25);
 	}
 	
-	public TextContainerFiFO(int size){
+	public TextContainerLiFo(int size){
 		this.size = size;
 		stack = new String[size];
 	}

@@ -1,15 +1,15 @@
 package x5.api;
 
-public class TextContainerLiFO implements TextContainer {
+public class TextContainerFiFo implements TextContainer {
 	
 	private String[] queue;
 	private int size, next=0, count=0, last=0;
 	
-	public TextContainerLiFO(){
+	public TextContainerFiFo(){
 		this(25);
 	}
 	
-	public TextContainerLiFO(int size){
+	public TextContainerFiFo(int size){
 		this.size = size;
 		queue = new String[size];
 	}

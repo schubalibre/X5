@@ -11,15 +11,16 @@ import x5.api.*;
 public class Main {
 	
 	public static void main(String[] args) {
-		startOneSenderAndTwoReceiver();
+		startOneSenderAndOneReceiver();
 	}
 	
 	/**
 	 * Einfacher Versuchsaufbau mit einem Sender und Empfänger.
 	 */
 	private static void startOneSenderAndOneReceiver() {
-		final TextContainer queue = new TextContainerPrototype(10);
+		final TextContainer queue = new TextContainerQueue();
 		Sender sender = new ConsoleSender("Sender 1", queue);
+		
 		Receiver receiver = new TextGUIReceiver("Receiver 1", queue);
 		
 		new AnimatorThread(sender).startExecution();

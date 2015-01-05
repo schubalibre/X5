@@ -45,7 +45,7 @@ public class TextGUIReceiver implements Receiver {
 	
 	// Nur zum Test
 	public static void main(String[] args) {
-		TextContainer textContainer = new TextContainerPrototype();
+		TextContainer textContainer = new TextContainerFiFo();
 		textContainer.enter("Test text");
 		textContainer.enter("hallo robert");
 		

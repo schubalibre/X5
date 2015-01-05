@@ -37,7 +37,7 @@ public class ConsoleSender implements Sender {
 
 	// Nur zum Test
 	public static void main(String[] args) {
-		TextContainer textContainer = new TextContainerPrototype();
+		TextContainer textContainer = new TextContainerFiFo();
 		ConsoleSender sender = new ConsoleSender("Test", textContainer);
 		new AnimatorThread(sender).startExecution();
 	}
