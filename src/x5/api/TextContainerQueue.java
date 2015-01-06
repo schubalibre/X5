@@ -20,5 +20,23 @@ public class TextContainerQueue implements TextContainer {
 		// TODO Auto-generated method stub
 		return queue.isEmpty();
 	}
+	
+	public static void main(String[] args) {
+		TextContainer queue = new TextContainerQueue();
+		queue.enter("1");
+		queue.enter("2");
+		queue.enter("3");
+		
+		try {
+			System.out.println(queue.remove());
+			System.out.println(queue.remove());
+			System.out.println(queue.remove());
+			System.out.println(queue.remove());
+		} catch (EmptyException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
 
 }
