@@ -3,7 +3,7 @@ import java.util.*;
 
 public class TextContainerQueue implements TextContainer {
 	
-	Queue<String> queue = new LinkedList<String>();
+	List<String> queue = new ArrayList<String>();
 
 	@Override
 	public void enter(String s) {
@@ -12,7 +12,7 @@ public class TextContainerQueue implements TextContainer {
 
 	@Override
 	public String remove() throws EmptyException {
-		return queue.remove();
+		return queue.remove(0);
 	}
 
 	@Override
