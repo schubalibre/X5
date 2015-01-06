@@ -28,7 +28,7 @@ public class Main {
 		
 		AnimatorThread receiverThread = new AnimatorThread(receiver);
 		receiverThread.startExecution();
-		receiverThread.setSleepRange(10000);
+		receiverThread.setSleepRange(5000);
 		
 	}
 	
