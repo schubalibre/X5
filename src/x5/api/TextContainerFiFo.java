@@ -39,5 +39,24 @@ public class TextContainerFiFo implements TextContainer {
 	public boolean empty() {
 		return count == 0;
 	}
+	
+	public static void main(String[] args) {
+		
+		TextContainerFiFo fifo = new TextContainerFiFo(3);
+		fifo.enter("1");
+		fifo.enter("2");
+		fifo.enter("3");
+	
+		try {
+			System.out.println(fifo.remove());
+			System.out.println(fifo.remove());
+			System.out.println(fifo.remove());
+			System.out.println(fifo.remove());
+		} catch (EmptyException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
 
 }
