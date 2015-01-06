@@ -13,10 +13,5 @@ public interface Sender extends Animate {
 	 * @return Der Name.
 	 */
 	String getName();
-	
-	/**
-	 * Methode die bei Animate aufgerufen wird.
-	 * 
-	 * */
-	public void act();
+
 }
